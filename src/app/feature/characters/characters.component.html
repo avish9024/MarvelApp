@@ -1,6 +1,6 @@
 <div class="root">
   <div class="root-header">
-    <h2 class="label-character">All Characters</h2>
+    <h2 class="label-character">All Characters  <span *ngIf="total !== null">({{total}})</span> </h2>
   </div>
 
   <div *ngFor="let item of characters">
