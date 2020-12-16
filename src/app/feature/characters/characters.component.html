@@ -8,9 +8,11 @@
       <div class="ant-col" style="padding: 8px 16px;">
         <div class="isis" style="opacity: 1;">
           <div class="img-container">
-            <img [src]="item.thumbnail.path + '/portrait_incredible.' + item.thumbnail.extension" class="card-img">
+            <div *ngIf="showSkeleton" [inlineSVG]="'assets/icons/img-skeleton.svg'"></div>
+<!--            <div *ngIf="showSkeleton">Loading...</div>-->
+            <img *ngIf="!showSkeleton" [src]="item.thumbnail.path + '/portrait_incredible.' + item.thumbnail.extension" class="card-img">
           </div>
-          <div class="mega-container">
+          <div *ngIf="!showSkeleton" class="mega-container">
             <h5>{{item.name}}</h5>
             <p class="card-desc">{{item.description}}</p>
             <div class="view-card"></div>

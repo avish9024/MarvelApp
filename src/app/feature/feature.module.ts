@@ -6,6 +6,7 @@ import { ComicsComponent } from './comics/comics.component';
 import { SeriesComponent } from './series/series.component';
 import { FeatureRoutingModule } from './feature-routing.module';
 import { CarouselComponent } from './home/carousel/carousel.component';
+import {InlineSVGModule} from 'ng-inline-svg';
 
 
 
@@ -16,7 +17,8 @@ import { CarouselComponent } from './home/carousel/carousel.component';
   ],
   imports: [
     CommonModule,
-    FeatureRoutingModule
+    FeatureRoutingModule,
+    InlineSVGModule
   ]
 })
 export class FeatureModule { }

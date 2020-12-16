@@ -9,10 +9,11 @@ import {MarvelService} from '../../shared/services/marvel.service';
 })
 export class CharactersComponent implements OnInit {
 
-  characters: Character[] = [];
+  characters: Character[] = new Array(40);
   shown = 40;
   total: number = null;
   filter = '';
+  showSkeleton = true;
   constructor(private marvelService: MarvelService) { }
 
   async ngOnInit(): Promise<void> {
@@ -23,6 +24,7 @@ export class CharactersComponent implements OnInit {
     const response: MarvelResponse<any> = await this.marvelService.getCharacters(this.shown, this.filter);
     this.total = response.data.total;
     this.characters = response.data.results;
+    this.showSkeleton = false;
     console.log(this.characters);
   }
 
