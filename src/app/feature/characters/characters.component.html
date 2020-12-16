@@ -4,7 +4,7 @@
   </div>
 
   <div *ngFor="let item of characters">
-    <div class="ant-row" style="margin: -8px -16px;">
+    <div class="ant-row" style="margin: -8px -16px;" (click)="redirectToCharacterDetails(item)">
       <div class="ant-col" style="padding: 8px 16px;">
         <div class="isis" style="opacity: 1;">
           <div class="img-container">

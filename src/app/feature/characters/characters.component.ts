@@ -10,6 +10,7 @@ import {MarvelService} from '../../shared/services/marvel.service';
 export class CharactersComponent implements OnInit {
 
   characters: Character[] = new Array(40);
+  selectedCharacter: Character = new Character();
   shown = 40;
   total: number = null;
   filter = '';
@@ -26,6 +27,10 @@ export class CharactersComponent implements OnInit {
     this.characters = response.data.results;
     this.showSkeleton = false;
     console.log(this.characters);
+  }
+
+  redirectToCharacterDetails(character: Character): void {
+    window.location.href = window.location.href + '/' + character.name + '/' + character.id;
   }
 
 }
