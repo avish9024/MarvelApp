@@ -1,12 +1,24 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import {RouterModule, Routes} from '@angular/router';
+import {HomeComponent} from './home/home.component';
+import {SeriesComponent} from './series/series.component';
+import {ComicsComponent} from './comics/comics.component';
+import {CharactersComponent} from './characters/characters.component';
 
-
+const routes: Routes = [
+  { path: 'home', component: HomeComponent},
+  { path: 'characters', component: CharactersComponent},
+  { path: 'comics', component: ComicsComponent},
+  { path: 'series', component: SeriesComponent},
+];
 
 @NgModule({
   declarations: [],
   imports: [
-    CommonModule
-  ]
+    CommonModule,
+    RouterModule.forChild(routes)
+  ],
+  exports: [RouterModule]
 })
 export class FeatureRoutingModule { }

@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
 import {InlineSVGModule} from 'ng-inline-svg';
+import {RouterModule} from '@angular/router';
 
 
 
@@ -10,9 +11,10 @@ import {InlineSVGModule} from 'ng-inline-svg';
     exports: [
         HeaderComponent
     ],
-  imports: [
-    CommonModule,
-    InlineSVGModule
-  ]
+    imports: [
+        CommonModule,
+        InlineSVGModule,
+        RouterModule
+    ]
 })
 export class SharedModule { }
