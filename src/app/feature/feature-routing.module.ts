@@ -5,10 +5,12 @@ import {HomeComponent} from './home/home.component';
 import {SeriesComponent} from './series/series.component';
 import {ComicsComponent} from './comics/comics.component';
 import {CharactersComponent} from './characters/characters.component';
+import {CharacterDetailsComponent} from './characters/character-details/character-details.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent},
   { path: 'characters', component: CharactersComponent},
+  { path: 'characters/:name/:id', component: CharacterDetailsComponent},
   { path: 'comics', component: ComicsComponent},
   { path: 'series', component: SeriesComponent},
 ];

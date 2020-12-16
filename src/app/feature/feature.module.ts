@@ -7,11 +7,12 @@ import { SeriesComponent } from './series/series.component';
 import { FeatureRoutingModule } from './feature-routing.module';
 import { CarouselComponent } from './home/carousel/carousel.component';
 import {InlineSVGModule} from 'ng-inline-svg';
+import { CharacterDetailsComponent } from './characters/character-details/character-details.component';
 
 
 
 @NgModule({
-  declarations: [HomeComponent, CharactersComponent, ComicsComponent, SeriesComponent, CarouselComponent],
+  declarations: [HomeComponent, CharactersComponent, ComicsComponent, SeriesComponent, CarouselComponent, CharacterDetailsComponent],
   exports: [
     HomeComponent
   ],
