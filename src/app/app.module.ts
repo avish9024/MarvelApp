@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import {SharedModule} from './shared/shared.module';
 import {InlineSVGModule} from 'ng-inline-svg';
+import {FeatureModule} from './feature/feature.module';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import {InlineSVGModule} from 'ng-inline-svg';
     AppRoutingModule,
     SharedModule,
     HttpClientModule,
-    InlineSVGModule.forRoot()
+    InlineSVGModule.forRoot(),
+    FeatureModule
   ],
   providers: [],
   bootstrap: [AppComponent]

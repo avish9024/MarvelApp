@@ -11,6 +11,9 @@ import { CarouselComponent } from './home/carousel/carousel.component';
 
 @NgModule({
   declarations: [HomeComponent, CharactersComponent, ComicsComponent, SeriesComponent, CarouselComponent],
+  exports: [
+    HomeComponent
+  ],
   imports: [
     CommonModule,
     FeatureRoutingModule
