@@ -63,3 +63,24 @@ export class Url {
   type: string;
   url: string;
 }
+
+export class Series {
+  characters: Comics;
+  comics: Comics;
+  creators: Comics;
+  description: string;
+  endYear: number;
+  events: Comics;
+  id: number;
+  modified: Date;
+  next: number;
+  previous: number;
+  rating: string;
+  resourceURI: string;
+  startYear: number;
+  stories: Comics;
+  thumbnail: Thumbnail;
+  title: string;
+  type: string;
+  urls: Url;
+}

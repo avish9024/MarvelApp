@@ -33,4 +33,5 @@ export class CharactersComponent implements OnInit {
     window.location.href = window.location.href + '/' + character.name + '/' + character.id;
   }
 
+
 }

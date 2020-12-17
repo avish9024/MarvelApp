@@ -6,6 +6,7 @@ import {SeriesComponent} from './series/series.component';
 import {ComicsComponent} from './comics/comics.component';
 import {CharactersComponent} from './characters/characters.component';
 import {CharacterDetailsComponent} from './characters/character-details/character-details.component';
+import {SeriesDetailsComponent} from './series/series-details/series-details.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent},
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: 'characters/:name/:id', component: CharacterDetailsComponent},
   { path: 'comics', component: ComicsComponent},
   { path: 'series', component: SeriesComponent},
+  { path: 'series/:title/:id', component: SeriesDetailsComponent},
 ];
 
 @NgModule({
