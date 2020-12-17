@@ -1,1 +1,19 @@
-<p>character-details works!</p>
+<div class="root-character-details">
+  <div class="kaWMrh">
+    <div class="character-img">
+      <div class="img-cover">
+        <div class="img-grid-item">
+          <div *ngIf="showSkeleton" [inlineSVG]="'assets/icons/img-skeleton.svg'"></div>
+          <img *ngIf="!showSkeleton" [src]="characterDetails.thumbnail.path + '/landscape_incredible.' + characterDetails.thumbnail.extension">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="character-desc">
+  <!--<h2>{{characterDetails.name}}</h2>
+  <p class="card-description">{{characterDetails.description}}</p>
+  <div class="availability-stats">
+    <div class="ant-row"></div>
+  </div>-->
+</div>

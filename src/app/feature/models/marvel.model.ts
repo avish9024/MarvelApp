@@ -33,3 +33,33 @@ export class Origin {
 export class Headers {
   public Accept: string;
 }
+
+export class Items {
+  name: string;
+  resourceURI: string;
+}
+
+export class Comics {
+  available: number;
+  items: Items[];
+  collectionURI: string;
+  returned: number;
+}
+
+export class Characters {
+  comics: Comics;
+  description: string;
+  id: number;
+  modified: Date;
+  name: string;
+  resourceURI: string;
+  series: Comics;
+  stories: Comics;
+  thumbnail: Thumbnail;
+  urls: Url;
+}
+
+export class Url {
+  type: string;
+  url: string;
+}

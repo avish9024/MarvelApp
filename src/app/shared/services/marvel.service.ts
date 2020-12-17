@@ -37,6 +37,16 @@ export class MarvelService {
     return response;
   }
 
+  public async getCharacterById(characterId: number): Promise<any> {
+    const timeStamp = this.getTimeStamp();
+    const hash = this.getHash(timeStamp);
+    // tslint:disable-next-line:max-line-length
+    // const requestUrl = this.marvelCharacterUrl + 'characters/' + characterId + '&ts=' + timeStamp + '&apikey=' + this.publicKey + '&hash=' + hash ;
+    const requestUrl = this.marvelCharacterUrl + 'characters/' + characterId + '?ts=1608227574556&apikey=80cef8aca6f32558abed515421191e21&hash=c0714b8b05a639552ea5576893320a9d';
+    const response = await this.httpService.get(requestUrl).toPromise();
+    return response;
+  }
+
   public async getComics(limit: number = 40, prefix: string = null): Promise<any> {
     const timeStamp = this.getTimeStamp();
     const hash = this.getHash(timeStamp);

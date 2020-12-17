@@ -1,0 +1,7 @@
+.a {
+  transition: color 0.2s ease-in-out 0s;
+  text-decoration: underline;
+}
+.company-name {
+  color: rgb(1, 180, 228);
+}

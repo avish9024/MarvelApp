@@ -1,0 +1,87 @@
+.root-character-details {
+  width: 100%;
+  min-height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.kaWMrh {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  color: rgb(255, 255, 255);
+}
+.character-img {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  min-height: 261px;
+  z-index: 0;
+}
+.character-img .img-cover {
+  position: absolute;
+  background-color: rgba(13, 37, 63, 0.9);
+  inset: 0px;
+}
+
+.character-img .img-grid-item {
+  z-index: 0;
+}
+
+.character-desc {
+  max-width: 900px;
+  margin: 0px auto;
+  padding: 0px 20px;
+  display: flex;
+  flex-direction: column;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  z-index: 0;
+}
+.character-desc .card-title {
+  font-size: 40px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  margin: 20px 0px;
+  text-align: center;
+}
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.25;
+}
+.character-desc .card-description {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 30px;
+  text-align: center;
+}
+.character-desc .availability-stats {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.ant-row {
+  position: relative;
+  height: auto;
+  margin-right: 0;
+  margin-left: 0;
+  zoom: 1;
+  display: block;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.character-desc .availability-stats .ant-row {
+  width: 100%;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
