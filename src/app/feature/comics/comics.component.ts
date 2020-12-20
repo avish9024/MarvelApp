@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Character, MarvelResponse} from '../models/marvel.model';
+import {Character, MarvelResponse, Series} from '../models/marvel.model';
 import {MarvelService} from '../../shared/services/marvel.service';
 
 @Component({
@@ -9,8 +9,8 @@ import {MarvelService} from '../../shared/services/marvel.service';
 })
 export class ComicsComponent implements OnInit {
 
-  characters: Character[] = new Array(40);
-  selectedCharacter: Character = new Character();
+  characters: Series[] = new Array(40);
+  selectedCharacter: Series = new Series();
   shown = 40;
   total: number = null;
   filter = '';
@@ -29,7 +29,7 @@ export class ComicsComponent implements OnInit {
     console.log(this.characters);
   }
 
-  redirectToCharacterDetails(character: Character): void {
-    window.location.href = window.location.href + '/' + character.name + '/' + character.id;
+  redirectToCharacterDetails(character: Series): void {
+    window.location.href = window.location.href + '/' + this.marvelService.getCodedName(character.title) + '/' + character.id;
   }
 }

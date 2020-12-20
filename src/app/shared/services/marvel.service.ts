@@ -70,4 +70,18 @@ export class MarvelService {
     const response = await this.httpService.get(requestUrl).toPromise();
     return response;
   }
+
+  public async getSeriesById(seriesId: number): Promise<any> {
+    const timeStamp = this.getTimeStamp();
+    const hash = this.getHash(timeStamp);
+    // tslint:disable-next-line:max-line-length
+    // const requestUrl = this.marvelCharacterUrl + 'series/' + seriesId + '&ts=' + timeStamp + '&apikey=' + this.publicKey + '&hash=' + hash;
+    const requestUrl = this.marvelCharacterUrl + 'series/' + seriesId + '?ts=1608227574556&apikey=80cef8aca6f32558abed515421191e21&hash=c0714b8b05a639552ea5576893320a9d';
+    const response = await this.httpService.get(requestUrl).toPromise();
+    return response;
+  }
+
+  getCodedName(str): string{
+    return str.split(' ').join('-').replace('(', '').replace(')', '');
+  }
 }

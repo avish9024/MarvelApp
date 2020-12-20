@@ -4,11 +4,12 @@ import { HeaderComponent } from './header/header.component';
 import {InlineSVGModule} from 'ng-inline-svg';
 import {RouterModule} from '@angular/router';
 import { FooterComponent } from './footer/footer.component';
+import { EncodeUriPipe } from './pipe/encode-uri.pipe';
 
 
 
 @NgModule({
-    declarations: [HeaderComponent, FooterComponent],
+    declarations: [HeaderComponent, FooterComponent, EncodeUriPipe],
     exports: [
         HeaderComponent,
         FooterComponent

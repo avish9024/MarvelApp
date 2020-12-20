@@ -6,7 +6,8 @@ import { AppRoutingModule } from './app-routing.module';
 import {SharedModule} from './shared/shared.module';
 import {InlineSVGModule} from 'ng-inline-svg';
 import {FeatureModule} from './feature/feature.module';
-import {RouterModule} from '@angular/router';
+import {RouterModule, UrlSerializer} from '@angular/router';
+import {CustomUrlSerializer} from './shared/custom-url-serializer';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,7 @@ import {RouterModule} from '@angular/router';
         FeatureModule,
         RouterModule
     ],
-  providers: [],
+  providers: [{provide: UrlSerializer, useClass: CustomUrlSerializer}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

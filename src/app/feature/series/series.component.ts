@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Character, MarvelResponse, Series} from '../models/marvel.model';
 import {MarvelService} from '../../shared/services/marvel.service';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-series',
@@ -15,7 +16,7 @@ export class SeriesComponent implements OnInit {
   total: number = null;
   filter = '';
   showSkeleton = true;
-  constructor(private marvelService: MarvelService) { }
+  constructor(private marvelService: MarvelService, private route: ActivatedRoute) { }
 
   async ngOnInit(): Promise<void> {
     await this.getAllCharacters();
@@ -30,11 +31,13 @@ export class SeriesComponent implements OnInit {
   }
 
   redirectToCharacterDetails(character: Series): void {
-    const url = window.location.href + '/' + this.getCodedName(character.title) + '/' + character.id;
-    console.log(url);
+    window.location.href  = window.location.href + '/' + this.marvelService.getCodedName(character.title) + '/' + character.id;
   }
 
-  getCodedName(str): string{
-    return str.split(' ').join('-').replace('(', '');
-  }
+  // encode(uriComponent: string): string {
+  //   return encodeURIComponent(uriComponent).replace(/[!'()*]/g, (c) => {
+  //     // Also encode !, ', (, ), and *
+  //     return '%' + c.charCodeAt(0).toString(16);
+  //   });
+  // }
 }

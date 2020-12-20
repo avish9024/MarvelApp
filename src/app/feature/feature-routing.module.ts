@@ -7,12 +7,14 @@ import {ComicsComponent} from './comics/comics.component';
 import {CharactersComponent} from './characters/characters.component';
 import {CharacterDetailsComponent} from './characters/character-details/character-details.component';
 import {SeriesDetailsComponent} from './series/series-details/series-details.component';
+import {ComicsDetailsComponent} from './comics/comics-details/comics-details.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent},
   { path: 'characters', component: CharactersComponent},
   { path: 'characters/:name/:id', component: CharacterDetailsComponent},
   { path: 'comics', component: ComicsComponent},
+  { path: 'comics/:title/:id', component: ComicsDetailsComponent},
   { path: 'series', component: SeriesComponent},
   { path: 'series/:title/:id', component: SeriesDetailsComponent},
 ];
