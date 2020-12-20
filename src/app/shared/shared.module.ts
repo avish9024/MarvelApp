@@ -6,15 +6,17 @@ import {RouterModule} from '@angular/router';
 import { FooterComponent } from './footer/footer.component';
 import { EncodeUriPipe } from './pipe/encode-uri.pipe';
 import {MatTabsModule} from '@angular/material/tabs';
+import { FavoritesComponent } from './favorites/favorites.component';
 
 
 
 @NgModule({
-    declarations: [HeaderComponent, FooterComponent, EncodeUriPipe],
-    exports: [
-        HeaderComponent,
-        FooterComponent
-    ],
+    declarations: [HeaderComponent, FooterComponent, EncodeUriPipe, FavoritesComponent],
+  exports: [
+    HeaderComponent,
+    FooterComponent,
+    FavoritesComponent
+  ],
   imports: [
     CommonModule,
     InlineSVGModule,

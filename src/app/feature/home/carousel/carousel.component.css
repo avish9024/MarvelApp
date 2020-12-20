@@ -1,0 +1,52 @@
+.carousel {
+  position: relative;
+  width: 100%;
+}
+.carousel-background {
+  background-color: rgba(13, 37, 63, 0.8);
+}
+.slider {
+  position: relative;
+  display: block;
+  -webkit-touch-callout: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+.slick-list {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+.slick-track {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: block;
+}
+.carousel-item {
+  height: 100%;
+}
+
+.slide {
+  max-width: 700px;
+  margin: auto;
+  height: 100%;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+}
+.item {
+  width: 450px;
+}
+.charts {
+  position: absolute;
+  direction: ltr;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  overflow: hidden;
+  pointer-events: none;
+  visibility: hidden;
+  z-index: -1;
+}
