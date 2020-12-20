@@ -17,6 +17,7 @@ export class SeriesDetailsComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.marvelService.seriesComponentActive = true;
     this.getSeriesDetails().then(response => {
       this.seriesDetails = response.data.results[0];
       console.log(this.seriesDetails);

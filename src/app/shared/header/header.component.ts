@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {environment} from '../../../environments/environment';
+import {MarvelService} from '../services/marvel.service';
 
 @Component({
   selector: 'app-header',
@@ -8,7 +9,7 @@ import {environment} from '../../../environments/environment';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(public marvelService: MarvelService) { }
 
   ngOnInit(): void {
   }

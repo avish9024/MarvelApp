@@ -8,6 +8,7 @@ import {InlineSVGModule} from 'ng-inline-svg';
 import {FeatureModule} from './feature/feature.module';
 import {RouterModule, UrlSerializer} from '@angular/router';
 import {CustomUrlSerializer} from './shared/custom-url-serializer';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import {CustomUrlSerializer} from './shared/custom-url-serializer';
         HttpClientModule,
         InlineSVGModule.forRoot(),
         FeatureModule,
-        RouterModule
+        RouterModule,
+        BrowserAnimationsModule
     ],
   providers: [{provide: UrlSerializer, useClass: CustomUrlSerializer}],
   bootstrap: [AppComponent]

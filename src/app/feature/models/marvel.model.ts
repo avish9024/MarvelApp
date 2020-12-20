@@ -70,6 +70,7 @@ export class Series {
   creators: Comics;
   description: string;
   endYear: number;
+  name: string;
   events: Comics;
   id: number;
   modified: Date;

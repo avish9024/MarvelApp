@@ -12,6 +12,11 @@ export class MarvelService {
   private marvelCharacterUrl = environment.marvelApi;
   private publicKey = environment.publicKey;
   private privateKey = environment.privateKey;
+  homeComponentActive = true;
+  charactersComponentActive = false;
+  comicsComponentActive = false;
+  seriesComponentActive = false;
+  componentActive = '';
 
   constructor(private httpService: HttpClient) { }
 

@@ -5,6 +5,7 @@ import {InlineSVGModule} from 'ng-inline-svg';
 import {RouterModule} from '@angular/router';
 import { FooterComponent } from './footer/footer.component';
 import { EncodeUriPipe } from './pipe/encode-uri.pipe';
+import {MatTabsModule} from '@angular/material/tabs';
 
 
 
@@ -14,10 +15,11 @@ import { EncodeUriPipe } from './pipe/encode-uri.pipe';
         HeaderComponent,
         FooterComponent
     ],
-    imports: [
-        CommonModule,
-        InlineSVGModule,
-        RouterModule
-    ]
+  imports: [
+    CommonModule,
+    InlineSVGModule,
+    RouterModule,
+    MatTabsModule
+  ]
 })
 export class SharedModule { }

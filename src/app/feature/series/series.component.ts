@@ -19,6 +19,7 @@ export class SeriesComponent implements OnInit {
   constructor(private marvelService: MarvelService, private route: ActivatedRoute) { }
 
   async ngOnInit(): Promise<void> {
+    this.marvelService.componentActive = 'series';
     await this.getAllCharacters();
   }
 

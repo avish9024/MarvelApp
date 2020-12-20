@@ -1,9 +1,14 @@
 <div class="header-main">
   <div class="header-wid" [inlineSVG]="'assets/icons/logo.svg'"></div>
   <ul class="list">
-    <li class="active" (click)="routeToHome()">Home</li>
-    <li class="not-active" (click)="routeToCharacters()">Characters</li>
-    <li class="not-active" (click)="routeToComics()">Comics</li>
-    <li class="not-active" (click)="routeToSeries()">Series</li>
+    <li [ngClass]="{'active': marvelService.componentActive === 'home','not-active': marvelService.componentActive !== 'home'}"
+        (click)="routeToHome()">Home</li>
+    <li [ngClass]="{'active': marvelService.componentActive === 'characters','not-active': marvelService.componentActive !== 'characters'}"
+      (click)="routeToCharacters()">Characters</li>
+    <li [ngClass]="{'active': marvelService.componentActive === 'comics','not-active': marvelService.componentActive !== 'comics'}"
+      (click)="routeToComics()">Comics</li>
+    <li [ngClass]="{'active': marvelService.componentActive === 'series','not-active': marvelService.componentActive !== 'series'}"
+      (click)="routeToSeries()">Series</li>
   </ul>
 </div>
+

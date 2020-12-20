@@ -19,6 +19,7 @@ export class HomeComponent implements OnInit {
   constructor(private marvelService: MarvelService) { }
 
   async ngOnInit(): Promise<void> {
+    this.marvelService.componentActive = 'home';
     await this.getAllCharacters();
     await this.getAllComics();
     await this.getAllSeries();

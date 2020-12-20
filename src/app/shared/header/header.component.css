@@ -31,6 +31,7 @@
   border-bottom: 4px solid rgb(1, 180, 228);
   border-radius: 2px;
 }
+li:hover {cursor: hand; cursor: pointer;}
 .li {
   display: list-item;
   text-align: -webkit-match-parent;
